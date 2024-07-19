@@ -1,0 +1,100 @@
+/* project.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  z-index: 10;
+}
+
+.nav .logo {
+  height: 50px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  margin: 0 15px;
+}
+
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+  color: #f0a500;
+}
+
+.banner h1 {
+  font-size: 3em;
+  margin: 20px 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.card-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.card-container img {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  scroll-behavior: smooth;
+  
+}
+
+.card-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
